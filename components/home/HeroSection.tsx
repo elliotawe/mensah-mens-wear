@@ -91,6 +91,9 @@ export function HeroSection({ merchant: _merchant, featuredItems = [] }: HeroSec
   }, { scope: containerRef });
 
   const previewItems = featuredItems.slice(0, 3);
+  const heroImageSrc = featuredItems[0]?.image_urls?.[0]
+    ? buildImageUrl(featuredItems[0].image_urls[0])
+    : '/images/placeholder.jpg';
 
   return (
     <section
@@ -181,7 +184,7 @@ export function HeroSection({ merchant: _merchant, featuredItems = [] }: HeroSec
             </Link>
             <Link
               href="/campaigns"
-              className="font-accent text-[10px] tracking-[0.2em] uppercase text-[var(--color-taupe)] hover:text-[var(--color-parchment)] transition-colors duration-200 flex items-center gap-2"
+              className="font-accent text-[10px] tracking-[0.2em] uppercase text-[var(--color-taupe)] hover:text-[var(--color-parchment)] transition-colors duration-200 flex items-center gap-2 min-h-11"
             >
               View Campaigns
               <svg viewBox="0 0 24 24" className="size-3.5 fill-none stroke-current stroke-2" aria-hidden="true">
@@ -231,7 +234,7 @@ export function HeroSection({ merchant: _merchant, featuredItems = [] }: HeroSec
 
           {/* Hero image */}
           <Image
-            src="/images/placeholder.jpg"
+            src={heroImageSrc}
             alt="Mensah luxury tailored menswear — SS25 collection"
             fill
             className="object-cover object-top"
@@ -241,7 +244,7 @@ export function HeroSection({ merchant: _merchant, featuredItems = [] }: HeroSec
 
           {/* Collection badge — floating top right */}
           <div
-            className="absolute top-8 right-8 z-20 px-4 py-2 rounded-[4px] backdrop-blur-sm"
+            className="absolute top-12 right-8 z-20 px-4 py-2 rounded-[4px] backdrop-blur-sm"
             style={{ background: 'rgba(201,168,76,0.1)', border: '1px solid rgba(201,168,76,0.3)' }}
           >
             <p className="font-accent text-[9px] tracking-widest uppercase text-[var(--color-gold)]">
