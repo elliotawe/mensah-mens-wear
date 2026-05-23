@@ -42,16 +42,12 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="relative z-10 flex-shrink-0" aria-label="Mensah — Home">
             <Image
-              src="/mensah_logo.png"
-              alt="Mensah"
-              width={120}
-              height={32}
-              className={cn(
-                'h-7 w-auto transition-all duration-300',
-                scrolled ? 'brightness-0 invert' : 'brightness-0 invert'
-              )}
-              priority
-            />
+                          src="/mensah_logo.png"
+                          alt="Mensah"
+                          width={120}
+                          height={32}
+                          className="h-7 "
+                        />
           </Link>
 
           {/* Desktop Nav */}

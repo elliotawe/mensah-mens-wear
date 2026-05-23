@@ -27,7 +27,7 @@ export async function Footer() {
               alt="Mensah"
               width={120}
               height={32}
-              className="h-7 w-auto brightness-0 invert opacity-90"
+              className="h-7 "
             />
             <p className="font-body text-sm text-[var(--color-taupe)] leading-relaxed max-w-[200px]">
               Crafted for the discerning man.

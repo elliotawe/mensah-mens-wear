@@ -64,7 +64,7 @@ function CampaignsSkeleton() {
 
 export default function CampaignsPage() {
   return (
-    <div className="pt-24 pb-20 min-h-screen">
+    <div className="pt-16 pb-20 min-h-screen">
       <div className="bg-[var(--color-obsidian)] pt-16 pb-12 mb-16">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">
           <p className="eyebrow mb-4">Editorial</p>
