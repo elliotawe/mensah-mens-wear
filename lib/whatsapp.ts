@@ -2,8 +2,7 @@ import type { BasketDetail } from './api/baskets';
 import { formatPrice } from './api/items';
 
 export function buildWhatsAppLink(basket: BasketDetail): string {
-  const whatsappNumber = "+233551694847"; // Replace with actual merchant WhatsApp number
-  if (!whatsappNumber) throw new Error('Merchant WhatsApp number unavailable');
+  const whatsappNumber = "233551694847";
 
   const lines: string[] = [
     `🛍️ *New Order — Mensah*`,
@@ -25,7 +24,8 @@ export function buildWhatsAppLink(basket: BasketDetail): string {
   ].filter(Boolean);
 
   const message = lines.join('\n');
-  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+  const digits = whatsappNumber.replace(/\D/g, '');
+  return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
 export function buildOrderSummaryText(basket: BasketDetail): string {
