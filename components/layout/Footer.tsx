@@ -6,13 +6,13 @@ export async function Footer() {
   let whatsappNumber: string | null = null;
   try {
     const merchant = await getMerchant();
-    whatsappNumber = "+233551694847"; // merchant.whatsapp_number;
+    whatsappNumber = "233551694847"; // merchant.whatsapp_number;
   } catch {
     // fail silently — footer still renders
   }
 
   const waLink = whatsappNumber
-    ? `https://wa.me/${whatsappNumber.replace(/\D/g, '')}`
+    ? `https://wa.me/233551694847?text=${encodeURIComponent(`Hello Mensah, I would like to inquire about your products.`)}`
     : null;
 
   return (

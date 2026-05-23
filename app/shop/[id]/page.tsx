@@ -43,5 +43,5 @@ export default async function ProductPage({ params }: Props) {
     merchant = null;
   }
 
-  return <ProductDetail item={item} whatsappNumber={"+233551694847"} />;
+  return <ProductDetail item={item} whatsappNumber={"233551694847"} />;
 }

@@ -24,7 +24,7 @@ export default async function HomePage() {
       <FeaturedProducts items={featured} />
       <BrandStory />
       {campaigns.length > 0 && <CampaignGrid campaigns={campaigns} />}
-      <WhatsAppCTA whatsappNumber={merchant.whatsapp_number ?? '+233551694847'} />
+      <WhatsAppCTA whatsappNumber={'233551694847'} />
     </>
   );
 }
