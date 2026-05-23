@@ -205,6 +205,8 @@
   background: rgba(61,53,48,0.25);
   border-radius: 999px;
 }
+.scrollbar-hide { scrollbar-width: none; -ms-overflow-style: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }
 
 /* ─── FOCUS ─── */
 :focus-visible {

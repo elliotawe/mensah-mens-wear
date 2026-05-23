@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { CampaignSummary } from '@/lib/api/campaigns';
+import { buildImageUrl } from '@/lib/api/merchant';
 
 interface CampaignGridProps {
   campaigns: CampaignSummary[];
@@ -32,7 +33,7 @@ export function CampaignGrid({ campaigns }: CampaignGridProps) {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {campaigns.slice(0, 6).map(campaign => {
-            const imageUrl = campaign.image_urls?.[0];
+            const imageUrl = campaign.image_urls?.[0] ? buildImageUrl(campaign.image_urls[0]) : null;
             return (
               <Link
                 key={campaign.id}

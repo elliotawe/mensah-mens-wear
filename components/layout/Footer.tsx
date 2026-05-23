@@ -6,7 +6,7 @@ export async function Footer() {
   let whatsappNumber: string | null = null;
   try {
     const merchant = await getMerchant();
-    whatsappNumber = merchant.whatsapp_number;
+    whatsappNumber = "+233551694847"; // merchant.whatsapp_number;
   } catch {
     // fail silently — footer still renders
   }
