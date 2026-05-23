@@ -62,7 +62,7 @@ export function CheckoutForm() {
       sessionStorage.setItem('mensah_last_wa_link', waLink);
 
       clearBasket();
-      window.open(waLink, '_blank', 'noopener,noreferrer');
+      window.location.href = waLink;
       router.push('/order-confirmed');
     } catch (err: unknown) {
       const msg = err instanceof Error ? err.message : 'Something went wrong. Please try again.';
