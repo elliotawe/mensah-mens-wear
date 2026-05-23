@@ -19,6 +19,11 @@ const buttonVariants = cva(
         destructive:
           "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
         link: "text-primary underline-offset-4 hover:underline",
+        /* Mensah luxury variants */
+        gold: "bg-[var(--color-gold)] text-[var(--color-obsidian)] hover:bg-[var(--color-gold-light)] font-accent tracking-widest uppercase active:scale-[0.98]",
+        "ghost-gold": "border border-[var(--color-gold)] text-[var(--color-gold)] hover:bg-[var(--color-gold-muted)] font-accent tracking-widest uppercase active:scale-[0.98]",
+        luxury: "bg-[var(--color-obsidian)] text-[var(--color-parchment)] hover:bg-[var(--color-charcoal)] font-accent tracking-widest uppercase active:scale-[0.98]",
+        "ghost-luxury": "border border-[var(--color-slate)] text-[var(--color-text-primary)] hover:border-[var(--color-text-primary)] font-accent tracking-widest uppercase active:scale-[0.98]",
       },
       size: {
         default:
