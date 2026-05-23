@@ -125,7 +125,7 @@ export function ProductDetail({ item, whatsappNumber }: ProductDetailProps) {
               {/* Add to basket */}
               <button
                 onClick={handleAddToBasket}
-                className="w-full h-13 bg-[var(--color-obsidian)] text-[var(--color-parchment)] font-accent text-[11px] tracking-widest uppercase rounded-[6px] hover:bg-[var(--color-charcoal)] transition-colors duration-200 cursor-pointer focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:outline-none"
+                className="w-full h-14 bg-[var(--color-obsidian)] text-[var(--color-parchment)] font-accent text-[11px] tracking-widest uppercase rounded-[6px] hover:bg-[var(--color-charcoal)] transition-colors duration-200 cursor-pointer focus-visible:ring-2 focus-visible:ring-[var(--color-gold)] focus-visible:outline-none"
               >
                 Add to Basket
               </button>

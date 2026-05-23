@@ -173,7 +173,7 @@ export function CheckoutForm() {
 
         {/* Order summary (sticky) */}
         <div className="lg:sticky lg:top-24">
-          <div className="border border-[var(--color-border)] rounded-[8px] p-6 bg-white">
+          <div className="border border-[var(--color-border)] rounded-[8px] p-6 bg-[var(--color-ivory)]">
             <h2 className="font-display text-xl font-300 text-[var(--color-text-primary)] mb-6">
               Order Summary
             </h2>

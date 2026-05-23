@@ -216,7 +216,7 @@ export function HeroSection({ merchant: _merchant, featuredItems = [] }: HeroSec
         <div
           ref={imageRef}
           className="relative hidden lg:block h-full min-h-[100dvh] overflow-hidden"
-          style={{ clipPath: 'inset(0 0 0 0)' }}
+          style={{ clipPath: 'inset(0 0 0 0)', willChange: 'transform' }}
         >
           {/* Gradient left edge blend */}
           <div

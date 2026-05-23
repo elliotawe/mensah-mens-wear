@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ShoppingBag, Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useBasketContext } from '@/context/BasketContext';
 import { MobileMenu } from './MobileMenu';
 import { cn } from '@/lib/utils';
@@ -15,6 +16,8 @@ const navLinks = [
 
 export function Header() {
   const { totalItems, openDrawer } = useBasketContext();
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -29,7 +32,7 @@ export function Header() {
       <header
         className={cn(
           'fixed top-0 left-0 right-0 z-(--z-sticky) transition-all duration-400',
-          scrolled
+          scrolled || !isHome
             ? 'bg-obsidian shadow-[0_1px_0_rgba(201,168,76,0.15)]'
             : 'bg-transparent'
         )}
