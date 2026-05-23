@@ -70,8 +70,8 @@ export function AdminLayout({ children }: AdminLayoutProps) {
                     className={cn(
                       'flex items-center gap-3 px-4 py-2.5 rounded-[4px] font-body text-sm transition-colors duration-200',
                       active
-                        ? 'border-l-[3px] border-[var(--color-gold)] text-[var(--color-gold)] bg-[var(--color-gold-muted)] pl-[13px]'
-                        : 'text-[var(--color-taupe)] hover:text-[var(--color-parchment)]'
+                        ? 'text-[var(--color-gold)] bg-[var(--color-gold-muted)] border border-[rgba(201,168,76,0.25)]'
+                        : 'text-[var(--color-taupe)] hover:text-[var(--color-parchment)] hover:bg-white/5 border border-transparent'
                     )}
                     aria-current={active ? 'page' : undefined}
                   >

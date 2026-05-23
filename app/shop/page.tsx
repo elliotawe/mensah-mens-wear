@@ -27,7 +27,7 @@ async function ShopContent() {
 
 export default function ShopPage() {
   return (
-    <div className="pt-24 pb-20 min-h-screen">
+    <div className="pt-16 pb-20 min-h-screen">
       {/* Page hero bar */}
       <div className="bg-[var(--color-obsidian)] pt-16 pb-12 mb-12">
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16">

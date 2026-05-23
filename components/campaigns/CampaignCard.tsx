@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { CampaignSummary } from '@/lib/api/campaigns';
+import { buildImageUrl } from '@/lib/api/merchant';
 
 interface CampaignCardProps {
   campaign: CampaignSummary;
@@ -8,7 +9,7 @@ interface CampaignCardProps {
 }
 
 export function CampaignCard({ campaign, variant = 'card' }: CampaignCardProps) {
-  const imageUrl = campaign.image_urls?.[0];
+  const imageUrl = campaign.image_urls?.[0] ? buildImageUrl(campaign.image_urls[0]) : null;
 
   if (variant === 'hero') {
     return (

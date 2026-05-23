@@ -19,12 +19,12 @@ export default async function HomePage() {
 
   return (
     <>
-      <HeroSection merchant={merchant} />
+      <HeroSection merchant={merchant} featuredItems={featured} />
       {campaigns[0] && <CampaignBanner campaign={campaigns[0]} />}
       <FeaturedProducts items={featured} />
       <BrandStory />
       {campaigns.length > 0 && <CampaignGrid campaigns={campaigns} />}
-      <WhatsAppCTA whatsappNumber={merchant.whatsapp_number} />
+      <WhatsAppCTA whatsappNumber={merchant.whatsapp_number ?? '+233551694847'} />
     </>
   );
 }

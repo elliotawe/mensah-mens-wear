@@ -174,10 +174,10 @@ export function OrganizationSchema({ merchant }: { merchant: Merchant }) {
     description: 'Luxury tailored menswear crafted for the discerning Ghanaian gentleman.',
     url: 'https://mensah.vercel.app',
     logo: 'https://mensah.vercel.app/mensah_logo.png',
-    contactPoint: merchant.whatsapp_number
+    contactPoint: '+233551694847'
       ? {
           '@type': 'ContactPoint',
-          telephone: merchant.whatsapp_number,
+          telephone: '+233551694847',
           contactType: 'sales',
           availableLanguage: 'English',
         }

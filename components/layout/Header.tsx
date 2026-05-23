@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ShoppingBag, Menu } from 'lucide-react';
 import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { useBasketContext } from '@/context/BasketContext';
 import { MobileMenu } from './MobileMenu';
 import { cn } from '@/lib/utils';
@@ -15,6 +16,8 @@ const navLinks = [
 
 export function Header() {
   const { totalItems, openDrawer } = useBasketContext();
+  const pathname = usePathname();
+  const isHome = pathname === '/';
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -28,27 +31,23 @@ export function Header() {
     <>
       <header
         className={cn(
-          'fixed top-0 left-0 right-0 z-[var(--z-sticky)] transition-all duration-400',
-          scrolled
-            ? 'bg-[var(--color-obsidian)] shadow-[0_1px_0_rgba(201,168,76,0.15)]'
+          'fixed top-0 left-0 right-0 z-(--z-sticky) transition-all duration-400',
+          scrolled || !isHome
+            ? 'bg-obsidian shadow-[0_1px_0_rgba(201,168,76,0.15)]'
             : 'bg-transparent'
         )}
         style={{ zIndex: 30 }}
       >
-        <div className="max-w-[1440px] mx-auto px-6 md:px-10 lg:px-16 h-16 flex items-center justify-between">
+        <div className="max-w-360 mx-auto px-6 md:px-10 lg:px-16 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative z-10 flex-shrink-0" aria-label="Mensah — Home">
             <Image
-              src="/mensah_logo.png"
-              alt="Mensah"
-              width={120}
-              height={32}
-              className={cn(
-                'h-7 w-auto transition-all duration-300',
-                scrolled ? 'brightness-0 invert' : 'brightness-0 invert'
-              )}
-              priority
-            />
+                          src="/mensah_logo.png"
+                          alt="Mensah"
+                          width={120}
+                          height={32}
+                          className="h-7 "
+                        />
           </Link>
 
           {/* Desktop Nav */}

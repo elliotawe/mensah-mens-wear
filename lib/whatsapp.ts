@@ -2,7 +2,7 @@ import type { BasketDetail } from './api/baskets';
 import { formatPrice } from './api/items';
 
 export function buildWhatsAppLink(basket: BasketDetail): string {
-  const whatsappNumber = basket.merchant?.whatsapp_number?.replace(/\D/g, '');
+  const whatsappNumber = "+233551694847"; // Replace with actual merchant WhatsApp number
   if (!whatsappNumber) throw new Error('Merchant WhatsApp number unavailable');
 
   const lines: string[] = [
